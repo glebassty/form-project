@@ -1,0 +1,113 @@
+# form project
+
+Прототип модуля для сопоставления **счетов и платежей**.  
+Есть форма ручного сопоставления и таблицы с данными. Пока данные хардкодом, без базы.
+
+---
+
+## стек проекта
+
+- **Next.js 15** — фронтенд-фреймворк (App Router, Server Actions, React 19)
+- **React 19** — UI-библиотека
+- **TypeScript 5** — типизация
+- **Tailwind CSS 4** — стилизация интерфейса
+- **React Hook Form** — работа с формами
+- **Zod** — валидация данных
+- **Radix UI** — готовые UI-примитивы (Dialog и др.)
+- **ESLint + Prettier** — линтинг и форматирование кода
+- **pnpm / npm** — менеджер пакетов
+
+---
+
+## что умеет
+
+- выбирать платёж и счёт для сопоставления
+- добавлять комментарий бухгалтера
+- подтверждать сохранение (диалог)
+- просматривать список платежей
+- просматривать список счетов
+- таблицы с пагинацией (заглушка)
+
+---
+
+## как запустить
+
+1. ставим зависимости
+
+   ```bash
+   npm install
+   ```
+
+2. запускаем dev-сервер
+
+   ```bash
+   npm run dev
+   ```
+
+приложение будет доступно на [http://localhost:3000](http://localhost:3000)
+
+---
+
+## структура
+
+- `components/MainForm.tsx` — форма сопоставления (react-hook-form + zod)
+- `components/DataTable.tsx` — таблица с пагинацией
+- `components/ConfirmDialog.tsx` — диалог подтверждения
+- `lib/data.ts` — тестовые данные (платежи и счета)
+- `utils/validation.ts` — схема валидации (zod)
+
+---
+
+## примеры данных
+
+**платежи:**
+
+```json
+{
+  "id": 1,
+  "createdAt": "2025-08-01",
+  "type": "электронный",
+  "amount": 5000,
+  "customer": "ООО Ромашка",
+  "customerInn": "7701234567",
+  "executor": "ИП Иванов",
+  "executorInn": "7707654321",
+  "studentName": "Петров Петр",
+  "comment": "Оплата за экзамен",
+  "accountantComment": ""
+}
+```
+
+**счета:**
+
+```json
+{
+  "id": 101,
+  "type": "обучение",
+  "studentName": "Петров Петр",
+  "qualification": "B001",
+  "amount": 5000,
+  "customer": "ООО Ромашка",
+  "customerInn": "7701234567",
+  "executor": "ИП Иванов",
+  "executorInn": "7707654321",
+  "purpose": "Счёт за курс подготовки"
+}
+```
+
+---
+
+## скрипты
+
+- `npm run dev` — запускает dev-сервер
+- `npm run build` — собирает проект
+- `npm run start` — запускает production-сервер
+- `npm run lint` — проверка eslint
+- `npm run lint:fix` — исправление eslint-ошибок
+- `npm run format:check` — проверка форматирования prettier
+- `npm run format:write` — автоформатирование prettier
+- `npm run typecheck` — проверка типов TypeScript
+
+```
+
+```
