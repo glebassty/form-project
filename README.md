@@ -94,20 +94,3 @@
   "purpose": "Счёт за курс подготовки"
 }
 ```
-
----
-
-## скрипты
-
-- `npm run dev` — запускает dev-сервер
-- `npm run build` — собирает проект
-- `npm run start` — запускает production-сервер
-- `npm run lint` — проверка eslint
-- `npm run lint:fix` — исправление eslint-ошибок
-- `npm run format:check` — проверка форматирования prettier
-- `npm run format:write` — автоформатирование prettier
-- `npm run typecheck` — проверка типов TypeScript
-
-```
-
-```
